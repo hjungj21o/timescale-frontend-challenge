@@ -52,6 +52,7 @@ const convertCharactersToArray = (heroes) => {
  *   ]
  * }
  */
+
 const groupByPublisher = (heroes) => {
   const res = {};
 
