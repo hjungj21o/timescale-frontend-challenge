@@ -18,3 +18,171 @@ $medium-breakpoint: 960px;
     box-sizing: border-box;
   }
 }
+
+
+header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 15px;
+  max-height: 50px;
+  background-color: $primary-light;
+
+  #logo {
+    font-size: 35px;
+  }
+
+  #brand-line {
+    font-size: 12px;
+  }
+
+  .navigation {
+    
+      & a {
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        height: 30px;
+        padding: 10px 15px;
+    
+        &:last-child {
+          background-color: $primary;
+          color: $primary-light;
+          border-radius: 3px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+  }
+}
+
+#hero {
+  max-width: $hero-width;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+.about-container {
+  padding-top: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  #headshot {
+    
+    height: auto;
+    border-radius: 50%;
+
+    & img {
+      border-radius: 50%;
+      max-width: $profile-image-width;
+      margin-right: 30px;
+    }
+  }
+
+   .about-me-text-container{
+    & h1{
+      font-size: 35px;
+    }
+
+    & p {
+      padding-top: 10px;
+    }
+      
+  }
+}
+
+  footer {
+    margin-top: 30px;
+    color: $primary-light;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    background-color: $primary;
+
+    .footer-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & nav a{
+        text-decoration: none;
+        color: $primary-light;
+        margin-right: 15px;
+
+        &:hover {
+          text-decoration: underline;
+          
+        }
+      }
+
+      .copyright {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navigation {
+      display: none;
+    }
+
+    #hero {
+      display: none;
+    }
+
+    .about-container {
+      flex-direction: column !important;
+      max-width: 100%;
+      margin: 0 auto;
+
+      #headshot {
+        margin: 0 auto;
+        align-items: center;
+        & img {
+          width: 50%;
+          align-items: center;
+          margin: 0 auto;
+        }
+      }
+
+      .about-me-text-container {
+        text-align: center;
+        & h1 {
+          font-size: 3rem;
+        }
+
+        & p {
+          font-size: 1.2em;
+        }
+      }
+
+    }
+    footer {
+      font-size: .8rem;
+      position: relative;
+      
+      .footer-container {
+        flex-direction: column !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+
+    }
+
+
+  }
+
+ 
+
+
